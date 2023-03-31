@@ -8,6 +8,8 @@ import TextComp from './components/Textcomp';
 import OtherComp from './components/OtherComp';
 import StateComp from './components/StateComp';
 
+import EventComp from './components/EventComp';
+
 /* 리액트에서 오류가 뜨는 이유
   1. 존재하지 않는 컴포넌트 출력
   (컴포넌트를 만든 이후에 이름은 가능하면 바꾸지말것)
@@ -37,6 +39,9 @@ function App() {
       {/* State를 가진 컴포넌트는 다시 사용해도 별개의 값으로 들어간다 */}
       <StateComp/>
       <StateComp/>
+
+      {/* event */}
+      <EventComp/>
     </div>
   );
 }
