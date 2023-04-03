@@ -3,6 +3,7 @@ import PropsComp from './components/PropsComp';
 import CountComp from './components/CountComp';
 import CountPropsComp from './components/CountPropsComp';
 import LoginComp from './components/LoginComp';
+import MemoComp from './components/MemoComp';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
        */}
 
     <LoginComp/>
+    <MemoComp/>
 
     </div>
   );
