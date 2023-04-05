@@ -14,6 +14,9 @@ import RefDomEvent from './components/RefDomEvent';
 import MapComp from './components/MapComp';
 
 import LifeCycle from './components/LifeCycle';
+import ArrowComponent from './components/ArrowComponent';
+import ArrowTest from './components/ArrowTest';
+import ArrowState from './components/ArrowState';
 
 
 /* 리액트에서 오류가 뜨는 이유
@@ -58,6 +61,20 @@ function App() {
       {/* 라이프사이클 */}
       <LifeCycle/>
 
+      {/* 함수형 컴포넌트 */}
+      <ArrowComponent text="문자열 전달"/>
+      <ArrowComponent>children으로 전달</ArrowComponent>
+
+      {/** 함수형 컴포넌트 실습
+       * 아래 컴포넌트를 함수형으로 만들고 출력하기
+       * name = "green" : h3 태그로 출력
+       * children = "환영합니다" : p태그로 출력
+       * check = {true} : check 값이 true 일때 name 출력
+       */}
+      <ArrowTest name="green" children="환영합니다" check = {true}></ArrowTest>
+      
+      {/** 함수형 컴포넌트의 state 사용 */}
+      <ArrowState/>
     </div>
   );
 }
