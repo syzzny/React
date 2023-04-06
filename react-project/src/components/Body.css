@@ -1,0 +1,83 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800&display=swap');
+
+.on{
+    color:#4E4C23;
+    text-decoration: line-through;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+li{
+    margin: 15px 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    color:whitesmoke;
+    font-weight: 300;
+    line-height: 35px;
+}
+body{
+    background-color: whitesmoke;
+}
+h1{
+    font-size: 50px;
+    font-family: 'Roboto Slab', serif;
+}
+.wrap{
+    width: 25%;
+    height: 750px;
+    padding: 20px 20px;
+    background-image: url("backimg1.jpg");
+    margin: 0 auto;
+}
+.inputtext{
+    width: 350px;
+    height: 35px;
+    border-radius: 50px;
+    border: 1px solid whitesmoke;
+    margin-right: 10px;
+    background-color: transparent;
+    color: snow;
+    padding: 0 10px;
+}
+.addbutton{
+    width: 37px;
+    height: 37px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+.allbutton{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.allbutton button{
+    padding: 5px;
+    margin: 0 5px;
+    width: 173px;
+    height: 38px;
+    font-family: 'Roboto Slab', serif;
+    border-radius: 50px;
+    background-color: transparent;
+    color: whitesmoke;
+    border: 1px solid transparent;
+    font-size: 18px;
+}
+.allbutton button:hover{
+    color: #480E02;
+    font-weight: bold;
+}
+
+.checkbutton{
+    float: left;
+}
+.listbutton{
+    float: right;
+    height: 25px;
+    border-radius: 50px;
+    border: 1px solid transparent;
+}
+.listbutton:hover{
+    background-color: #480E02;
+}
