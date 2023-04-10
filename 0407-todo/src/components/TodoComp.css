@@ -1,0 +1,16 @@
+ul{
+    list-style: none;
+}
+
+.imgtest{
+    
+    width: 500px;
+    height: 500px;
+}
+.logoimg{
+    /* background-image: url("../moca_logo.jpg"); */
+    width: 500px;
+    height: 500px;
+    mix-blend-mode:multiply;
+    background-repeat: no-repeat;
+}
