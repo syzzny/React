@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react'
 
 import './Index.css'
+import { Link } from 'react-router-dom'
+
+
 import ScrollAnimate from 'react-scroll-fade-animation';
 import { Swiper, SwiperSlide } from "swiper/react"; // basic
-import SwiperCore, { Navigation, Pagination } from "swiper";
+import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
 import "swiper/css"; //basic
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -94,10 +97,13 @@ export default function Index() {
                                 <h2>We present the best work.</h2>
                             </div>
                             <div className='main-artwork-more'>
-                                <a href="">
-                                    <span>more about art</span>
-                                    <img src="/assets/img/moreicon.png" alt="" />
-                                </a>
+                                <Link to={'/artworkall'}>
+                                    <a href="">
+
+                                        <span>more about art</span>
+                                        <img src="/assets/img/moreicon.png" alt="" />
+                                    </a>
+                                </Link>
                             </div>
                             <div className='main-artwork-art'>
                                 {/* spaceBetween : Slide간의 간격, slidesPreview : 한번에 보여지는 slide 개수
@@ -139,22 +145,50 @@ export default function Index() {
                                 <h2>PROGRAM</h2>
                             </div>
                             <div className='border'></div>
-                            <div className='main-program-infor'>
-                                <div className='main-program-sub'>
-                                    <span className='place'>Exhibition Hall</span>
-                                    <span className='price'>FREE</span>
-                                    <span className='time'>Tue,Fri 10:00am - 11:00am</span>
-                                </div>
-                                <div className='main-program-title'>
-                                    <span>[MAURIZIO CATTELAN] <br />예술적 경험을 확장하는 대학생 교육</span>
-                                </div>
-                                <div className='main-program-button'>
-                                    <img src="/assets/img/programicon.png" alt="" />
-                                </div>
-                            </div>
-                            <div className='main-program-img'>
-                                <img src="/assets/img/program02.jpg" alt="" />
-                            </div>
+                            <ul>
+                                <Swiper slidesPerView={1} autoplay={{ delay: 4000 }} loop={true} modules={[Autoplay]}>
+                                    <SwiperSlide>
+                                        <li>
+                                            <div className='main-program-infor'>
+                                                <div className='main-program-sub'>
+                                                    <span className='place'>Exhibition Hall</span>
+                                                    <span className='price'>FREE</span>
+                                                    <span className='time'>Tue,Fri 10:00am - 11:00am</span>
+                                                </div>
+                                                <div className='main-program-title'>
+                                                    <span>[MAURIZIO CATTELAN] <br />예술적 경험을 확장하는 대학생 교육</span>
+                                                </div>
+                                                <div className='main-program-button'>
+                                                    <img src="/assets/img/programicon.png" alt="" />
+                                                </div>
+                                            </div>
+                                            <div className='main-program-img'>
+                                                <img src="/assets/img/program02.jpg" alt="" />
+                                            </div>
+                                        </li>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <li>
+                                            <div className='main-program-infor'>
+                                                <div className='main-program-sub'>
+                                                    <span className='place'>Exhibition Hall</span>
+                                                    <span className='price'>FREE</span>
+                                                    <span className='time'>Tue,Fri 10:00am - 11:00am</span>
+                                                </div>
+                                                <div className='main-program-title'>
+                                                    <span>[MAURIZIO CATTELAN] <br />예술적 경험을 확장하는 대학생 교육</span>
+                                                </div>
+                                                <div className='main-program-button'>
+                                                    <img src="/assets/img/programicon.png" alt="" />
+                                                </div>
+                                            </div>
+                                            <div className='main-program-img'>
+                                                <img src="/assets/img/program03.jpg" alt="" />
+                                            </div>
+                                        </li>
+                                    </SwiperSlide>
+                                </Swiper>
+                            </ul>
                             <div className='border'></div>
                         </div>
                     </div>

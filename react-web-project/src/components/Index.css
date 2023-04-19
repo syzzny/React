@@ -38,7 +38,7 @@ p {
     top: 0;
     left: 0;
     background-color: white;
-    z-index: 1;
+    z-index: 500;
     transition: top 0.7s ease-in-out;
 }
 
@@ -158,7 +158,7 @@ p {
 }
 
 .main-artwork_slogan {
-    margin-bottom: 80px;
+    margin-bottom: 150px;
 }
 
 .main-artwork-more a {
@@ -170,7 +170,7 @@ p {
     width: 213px;
     position: absolute;
     right: 0;
-    top: 83px;
+    top: 145px;
 }
 
 .main-artwork-more img {
@@ -192,28 +192,32 @@ p {
 .allswiperbutton {
     display: flex;
     justify-content: space-between;
-    margin-top: 32px;
+    margin-top: 28px;
+}
+
+.allswiperbutton:hover {
+    cursor: pointer;
 }
 
 .allswiperbutton img {
-    width: 54px;
+    width: 40px;
 }
 
 .swiper-prev {
-    width: 54px;
+    width: 40px;
 }
 
 .swiper-next {
-    width: 54px;
+    width: 40px;
 }
 
 .swiper-pagination {
     --swiper-theme-color: #eee;
-    bottom: 20px !important;
+    bottom: 15px !important;
 }
 
 .swiper-pagination-bullet {
-    width: 12px !important; 
+    width: 12px !important;
     height: 12px !important;
 }
 
@@ -252,7 +256,6 @@ p {
 .main-program-img img {
     width: 1500px;
 }
-
 .main-program-infor {
     width: 100%;
     margin-top: 70px;
@@ -310,7 +313,14 @@ p {
 .main-contents-img img {
     width: 1000px;
 }
+.main-contents-img img {
+    transition: transform 0.4s ease-in-out;
+}
 
+.main-contents-img img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
 .main-contents-title {
     margin-top: 20px;
     text-align: initial;
