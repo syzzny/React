@@ -38,5 +38,12 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "http://artworkkorea.com"
+  "homepage": "https://syzzny.github.io/reacttest",
+
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "deploy": "gh-pages -d build",  //여기 추가
+    "predeploy": "npm run build"   //여기 추가
+  }
 }
