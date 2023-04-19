@@ -1,7 +1,8 @@
 
 import React, { useState, useEffect } from 'react'
 
-import './ArtworkAll.css'
+import './css/ArtworkAll.css'
+import { Link } from 'react-router-dom'
 
 import ScrollAnimate from 'react-scroll-fade-animation';
 
@@ -104,13 +105,16 @@ export default function ArtworkAll() {
                 <div className='artlist'>
                     <div className='artlist-wrap'>
                         <ul className='artlist-img'>
-                            <li>
-                                <a href=""><img src="/assets/img/artwork01.jpg" alt="" /></a>
-                                <div className='article-info'>
-                                    <span className='title'>부산모카 시네미디어</span>
-                                    <span className='date'>2021.10.08 -</span>
-                                </div>
-                            </li>
+                            <Link to={'/artworkinfo'}>
+                                <li>
+                                    <a href=""><img src="/assets/img/artwork01.jpg" alt="" /></a>
+                                    <div className='article-info'>
+                                        <span className='title'>부산모카 시네미디어</span>
+                                        <span className='date'>2021.10.08 -</span>
+                                    </div>
+                                </li>
+                            </Link>
+                            <Link to={'/artworkinfo'}>
                             <li>
                                 <a href=""><img src="/assets/img/artwork02.jpg" alt="" /></a>
                                 <div className='article-info'>
@@ -118,6 +122,8 @@ export default function ArtworkAll() {
                                     <span className='date'>2021.10.08 -</span>
                                 </div>
                             </li>
+                            </Link>
+                            <Link to={'/artworkinfo'}>
                             <li>
                                 <a href=""><img src="/assets/img/artwork03.jpg" alt="" /></a>
                                 <div className='article-info'>
@@ -125,6 +131,8 @@ export default function ArtworkAll() {
                                     <span className='date'>2021.10.08 -</span>
                                 </div>
                             </li>
+                            </Link>
+                            <Link to={'/artworkinfo'}>
                             <li>
                                 <a href=""><img src="/assets/img/artwork04.jpg" alt="" /></a>
                                 <div className='article-info'>
@@ -132,6 +140,7 @@ export default function ArtworkAll() {
                                     <span className='date'>2021.10.08 -</span>
                                 </div>
                             </li>
+                            </Link>
                         </ul>
                     </div>
                 </div>

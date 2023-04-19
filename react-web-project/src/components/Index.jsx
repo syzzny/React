@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
-import './Index.css'
+import './css/Index.css'
+
 import { Link } from 'react-router-dom'
 
 
