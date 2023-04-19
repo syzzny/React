@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 
 // json 내용 대신에 
@@ -7,6 +7,7 @@ import data from '../data/dummy.json'
 
 import { useContext } from 'react';
 import DataContext from '../context/DataContext';
+import CommentComp from '../components/CommentComp';
 
 // id로 구분하기위해 board에 data의 내용이 필요함
 export default function Board() {
@@ -20,12 +21,24 @@ export default function Board() {
     const { state, action } = useContext(DataContext);
     const { boardlist } = state;
 
+    // 코멘트의 작성할 글을 저장하기 위한 공간
+    const [text, setText] = useState("");
+
     // 배열의 함수인 find 를 이용하여
     // 함수의 조건이 참인 하나의 값을 가져온다 
     // find로 가져온값은 배열 안에 있는 하나의 값
     // find로 값을 찾지 못할 경우 undefined 출력
     // undefined의 값에 속성을 찾으려고하면 >> 오류!
     const boardData = boardlist.find((d) => (d.id == id))
+
+    // state의 commentlist에서 boardId와 param의 id값이 같은 
+    // 새로운 배열 작성 (filter)
+    const boardCommnetlist = state.commentlist.filter(
+        (comment) => (comment.boardId == id)
+    )
+
+
+
 
     // useEffect를 사용해서 boardData값이 undefind면 
     // 오류 페이지 컴포넌트로 이동 혹은 목록으로 이동
@@ -43,13 +56,52 @@ export default function Board() {
         // 2. id와 동일한 객체를 제외한 새로운 배열을 만들다
         // (filter)
         // 일치 비교연산자 사용할때는 자료형까지 동일해야한다
-        const newBoardlist = boardlist.filter((board) => (board.id !== Number(id)))
+        const newBoardlist = boardlist.filter(
+            (board) => (board.id !== Number(id)))
 
         // 3. 새로운 배열을 set메소드를 통해 넣어준다
         action.setBoardlist(newBoardlist);
 
         // 삭제 이후에 boardlist로 이동
         navigate('/boardlist');
+    }
+
+    // 코멘트 추가 메소드
+    const addComment = () => {
+        // 1. 추가할 코멘트 객체 생성
+        const newComment = {
+            cid: state.cid,
+            boardId: boardData.id,
+            text: text,
+            date: "2023-04-19",
+            writer: state.user.writer
+        }
+        // 1-1.cid 값 증가를 위한 메소드 실행
+        action.cidCount();
+
+        // 2. 코멘트가 추가된 새로운 배열 concat()
+        const newCommnetlist = state.commentlist.concat(newComment);
+
+        // 3. 새로운 배열을 set메소드를 통해서 값 할당
+        action.setCommentlist(newCommnetlist)
+    }
+
+    // 코멘트를 삭제하기위한 메소드
+    const deleteComment = (cid) => {
+        // 1. 삭제/수정을 할때는 값의 id(유일한값)을 통해 확인
+        // boardCommentlist의 각 객체에 cid가 있음
+        // >> map으로 객체를 하나씩 출력할때 cid값을 가져옴
+
+
+        // 2. filter를 통해서 id 값을 제외한 새로운 배열생성
+        // state.commentlist(전체배열)를 통해서 새로운 배열 생성!
+        const newCommentlist = state.commentlist.filter(
+            (comment) => (comment.cid !== cid)
+        )
+
+        // 3. 그 배열을 set메소드를 통해 값 할당
+        action.setCommentlist(newCommentlist);
+
     }
 
 
@@ -93,6 +145,30 @@ export default function Board() {
                             이 게시글 수정하기
                         </button>
                     </div>)
+            }
+            <hr />
+            {/** 코멘트를 작성할 공간 */}
+            <input type="text"
+                onChange={(e) => { setText(e.target.value) }}
+            />
+            <button
+                onClick={addComment}
+            >
+                댓글추가
+            </button>
+            <hr />
+            { // 값을 넘길 형태가 객체로 주어져있으면 객체로 넘길수 있다
+                // state의 commentlist를 그대로 쓰게되면 전체가 나옴
+                // >> 동일한 boardId를 가진 commentlist를 만들어야함
+                boardCommnetlist.map((comment) => (
+                    <CommentComp
+                        key={comment.cid}
+                        comment={comment}
+                        // 메소드를 작성하여서 전달
+                        // 메소드를 전달할때는 이름으로 전달한다
+                        deleteComment={deleteComment}
+                    />
+                ))
             }
 
         </div>
