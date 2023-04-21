@@ -1,7 +1,8 @@
 
 import React, { useState, useEffect } from 'react'
 
-import './css/ArtworkAll.css'
+import './css/Index.css'
+
 import { Link } from 'react-router-dom'
 
 import ScrollAnimate from 'react-scroll-fade-animation';
@@ -46,9 +47,11 @@ export default function ArtworkAll() {
 
             <header className={header}>
                 <div className='header_inner'>
-                    <div id='logo'>
-                        <a href="#"><img src="/assets/img/logo2.png" alt="" /></a>
-                    </div>
+                    <a href="/">
+                        <div id='logo'>
+                            <img src="/assets/img/logo2.png" alt="" />
+                        </div>
+                    </a>
                     <nav className='menu-container'>
                         <ul id='menu'>
                             <li><a href="#main-artwork"><span>전시</span></a></li>
@@ -67,7 +70,7 @@ export default function ArtworkAll() {
             </header>
 
 
-            <main id='main' className='main-container'>
+            <main id='ArtworkAll_main' className='main-container'>
 
                 <div className='artfilter'>
                     <div className='artfilter-wrap'>
@@ -115,31 +118,31 @@ export default function ArtworkAll() {
                                 </li>
                             </Link>
                             <Link to={'/artworkinfo'}>
-                            <li>
-                                <a href=""><img src="/assets/img/artwork02.jpg" alt="" /></a>
-                                <div className='article-info'>
-                                    <span className='title'>부산모카 시네미디어</span>
-                                    <span className='date'>2021.10.08 -</span>
-                                </div>
-                            </li>
+                                <li>
+                                    <a href=""><img src="/assets/img/artwork02.jpg" alt="" /></a>
+                                    <div className='article-info'>
+                                        <span className='title'>부산모카 시네미디어</span>
+                                        <span className='date'>2021.10.08 -</span>
+                                    </div>
+                                </li>
                             </Link>
                             <Link to={'/artworkinfo'}>
-                            <li>
-                                <a href=""><img src="/assets/img/artwork03.jpg" alt="" /></a>
-                                <div className='article-info'>
-                                    <span className='title'>부산모카 시네미디어</span>
-                                    <span className='date'>2021.10.08 -</span>
-                                </div>
-                            </li>
+                                <li>
+                                    <a href=""><img src="/assets/img/artwork03.jpg" alt="" /></a>
+                                    <div className='article-info'>
+                                        <span className='title'>부산모카 시네미디어</span>
+                                        <span className='date'>2021.10.08 -</span>
+                                    </div>
+                                </li>
                             </Link>
                             <Link to={'/artworkinfo'}>
-                            <li>
-                                <a href=""><img src="/assets/img/artwork04.jpg" alt="" /></a>
-                                <div className='article-info'>
-                                    <span className='title'>부산모카 시네미디어</span>
-                                    <span className='date'>2021.10.08 -</span>
-                                </div>
-                            </li>
+                                <li>
+                                    <a href=""><img src="/assets/img/artwork04.jpg" alt="" /></a>
+                                    <div className='article-info'>
+                                        <span className='title'>부산모카 시네미디어</span>
+                                        <span className='date'>2021.10.08 -</span>
+                                    </div>
+                                </li>
                             </Link>
                         </ul>
                     </div>

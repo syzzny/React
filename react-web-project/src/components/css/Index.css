@@ -60,6 +60,10 @@ p {
     margin: 0;
 }
 
+#logo:hover{
+    cursor: pointer;
+}
+
 #logo img {
     width: 120px;
 }
@@ -67,6 +71,8 @@ p {
 .menu-container {
     position: relative;
     text-align: center;
+    width: 1500px;
+    margin: 0 auto;
 }
 
 #menu {
@@ -402,4 +408,67 @@ p {
     padding: 15px 0;
     margin-top: 15px;
     font-weight: 200;
+}
+
+/*---------------------------------------------------- ArtworkAll css ------------------------------------------------- */
+
+#ArtworkAll_main{
+    padding: 150px 0 20px;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+}
+.filter-name{
+    margin-bottom: 30px;
+}
+.filter-top-list-place li{
+    margin: 10px 0;
+}
+.borderline{
+    border-bottom: 1px solid #ECECEC;
+    margin: 30px 0 30px;
+    width: 250px;
+}
+.art-date-list{
+    display: flex;
+}
+.art-date-list li{
+    margin: 5px 5px 0 0;
+    padding: 5px 10px;
+    border: 1px solid #DFDFDF;
+    font-size: 14px;
+    
+}
+.art-date-list li a{
+    color: #8B8B8B;
+}
+.artlist-wrap img{
+    width: 570px;
+}
+.artlist-img{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 50px;
+}
+.artlist-img li{
+    position: relative;
+}
+.artfilter{
+    padding: 10px;
+    width: 400px;
+    text-align: initial;
+}
+.article-info{
+    display: flex;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.title{
+    margin-right: 100px;
+    font-weight: 400;
+}
+.date{
+    color: #868E96;
+    font-weight: 400;
 }

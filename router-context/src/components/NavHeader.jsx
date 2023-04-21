@@ -17,6 +17,7 @@ export default function NavHeader() {
                 state.user.login ? <span>{state.user.writer}</span>
                     : <Link to='/loginform'>LOGIN</Link>
             }
+            <Link to= '/image'>Image</Link>
 
         </div>
     )

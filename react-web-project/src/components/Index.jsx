@@ -57,9 +57,11 @@ export default function Index() {
 
             <header className={header}>
                 <div className='header_inner'>
-                    <div id='logo'>
-                        <a href="#"><img src="/assets/img/logo2.png" alt="" /></a>
-                    </div>
+                    <a href="/">
+                        <div id='logo'>
+                            <img src="/assets/img/logo2.png" alt="" />
+                        </div>
+                    </a>
                     <nav className='menu-container'>
                         <ul id='menu'>
                             <li><a href="#main-artwork"><span>전시</span></a></li>
