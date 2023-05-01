@@ -33,3 +33,6 @@ ul{
 .icon_list li{
     padding: 0 40px;
 }
+.icon_list li:hover{
+    color:#ddd;
+}
