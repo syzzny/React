@@ -1,0 +1,15 @@
+/* NavLink와 Link는 a의 디자인을 넣어서 바꾼다
+ * Link의 경우 className이 안먹히는 경우가 있다 */
+a {
+    color: #000;
+    text-decoration: none;
+    padding:  20px 20px;
+}
+
+.nav{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.nav.on{
+    color: pink;
+}

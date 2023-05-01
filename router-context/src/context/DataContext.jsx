@@ -42,8 +42,13 @@ const DataProvider = ({ children }) => {
     const [id, setId] = useState(4);
 
     // user값 을 사용하기위해 useState() 작성
+    // 사용하는 동안에는 계속 로그인이 되어있게
     const [user, setUser] = useState(
-        { writer: "익명", login: false }
+        { 
+            writer: "yejin", 
+            login: true, 
+            profile:require('../img/profile.jpg')
+        } 
     )
 
     // commentlist 값 저장

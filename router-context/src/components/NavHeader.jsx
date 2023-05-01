@@ -10,14 +10,15 @@ export default function NavHeader() {
             <Link to='/'>HOME</Link>
             <Link to='/boardlist'>BOARD</Link>
             <Link to='/boardwriteform'>WRITE</Link>
+            <Link to='/image'>Image</Link>
             {/** state의 user의 login이 false 일때 : Link
          *   true 일때 : user의 writer 출력
          */}
             {
-                state.user.login ? <span>{state.user.writer}</span>
+                state.user.login ? <Link to='/mypage'>{state.user.writer}님의 페이지</Link>
                     : <Link to='/loginform'>LOGIN</Link>
             }
-            <Link to= '/image'>Image</Link>
+
 
         </div>
     )

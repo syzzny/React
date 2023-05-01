@@ -1,0 +1,35 @@
+img{
+    width: 500px;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+.wrap{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.img_wrap{
+    width: 500px;
+    height: 375px;
+    overflow: hidden;
+}
+.slick-slide img{
+    margin: 0 auto;
+}
+.slick-dots{
+    bottom: 15px;
+}
+
+.icon{
+    margin-top: 90px;
+    width: 900px;
+}
+.icon_list{
+    display: flex;
+    justify-content: center;
+}
+.icon_list li{
+    padding: 0 40px;
+}

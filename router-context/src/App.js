@@ -10,6 +10,7 @@ import BoardWriteForm from './page/BoardWriteForm';
 import BoardModifyForm from './page/BoardModifyForm';
 import LoginForm from './page/LoginForm';
 import ImagePage from './page/ImagePage';
+import MyPage from './page/MyPage';
 
 function App() {
   return (
@@ -23,8 +24,10 @@ function App() {
             <Route path='/boardwriteform' element={<BoardWriteForm />}/>
             <Route path='/board-modify-form' element={<BoardModifyForm />}/>
 
-            <Route path='/loginform' element={<LoginForm />}/></Route>
-            <Route path='/image' element={<ImagePage/>}></Route>
+            <Route path='/loginform' element={<LoginForm />}/>
+            <Route path='/image' element={<ImagePage/>}/>
+            <Route path='/mypage' element={<MyPage/>}/>
+          </Route>
 
         </Routes>
       </DataProvider>
